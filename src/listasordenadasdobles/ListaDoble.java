@@ -22,12 +22,13 @@ public class ListaDoble {
             this.puntero.setSiguiente(nuevo);
             this.puntero = nuevo;
             this.puntero.setAnterior(anterior);
-
         }
     }
 
     public void eliminarNodo(int valor) {
         if (cabecera != null) {
+            //Actual = 4
+            //Anterior = cabezera
             Nodo actual = cabecera;
             Nodo anterior = null;
             while (actual != null) {
@@ -70,19 +71,17 @@ public class ListaDoble {
     public List<Integer> retornarLista() {
         Nodo nodo = cabecera;
         List<Integer> lista = new ArrayList<>();
-        int contador = 0;
         while (nodo != null) {
-            if (nodo.getAnterior() != null) {
+            /*if (nodo.getAnterior() != null) {
                 System.out.println("Anterior: " + nodo.getAnterior().getValor());
             }
             System.out.println("Actual: " + nodo.getValor());
             if (nodo.getSiguiente() != null) {
                 System.out.println("Siguiente: " + nodo.getSiguiente().getValor());
             }
-            System.out.println("--------------------------------");
+            System.out.println("--------------------------------");*/
             lista.add(nodo.getValor());
             nodo = nodo.getSiguiente();
-            contador++;
         }
         return lista;
     }
