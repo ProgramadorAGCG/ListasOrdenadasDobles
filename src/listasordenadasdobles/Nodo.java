@@ -3,7 +3,7 @@ package listasordenadasdobles;
 
 public class Nodo {
     
-    private Nodo inicio;
+    private Nodo anterior;
     private Nodo siguiente;
     private int valor;
 
@@ -11,17 +11,17 @@ public class Nodo {
     }
 
     public Nodo(int valor) {
-        this.inicio = null;
+        this.anterior = null;
         this.siguiente = null;
         this.valor = valor;
     }
 
-    public Nodo getInicio() {
-        return inicio;
+    public Nodo getAnterior() {
+        return anterior;
     }
 
-    public void setInicio(Nodo inicio) {
-        this.inicio = inicio;
+    public void setAnterior(Nodo anterior) {
+        this.anterior = anterior;
     }
 
     public Nodo getSiguiente() {
